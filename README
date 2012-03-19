@@ -1,1 +1,17 @@
-SELF iCurate MyStyle Virtual Trunk Show
+Mister Machine: Death Star
+
+Boilerplate theme for rapid WordPress theme development. Featured include:
+
+# HTML5 Boilerplate integration
+# Responsive CSS
+# Inclusion of common JavaScript libraries: Modernizr, jQuery UI (tabs, dialog and datepicker), and jQuery Validation
+# Asynchronous Social Widget Scripts for Facebook, Twitter, Google+
+# MailChimp API class
+# Capistrano Deployment script
+
+
+To Use:
+
+# Set your environment configuration in wp-config.php. Don't forget to get a new set of Authentication Unique Keys and Salts and adjust your table_prefix as needed.
+# Add an environment trigger file one directory above your project: "env_local", "env_test", etc.
+# For Capistrano deployment, add your deployment settings to /config/deploy.rb
