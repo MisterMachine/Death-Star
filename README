@@ -2,16 +2,16 @@ Mister Machine: Death Star
 
 Boilerplate theme for rapid WordPress theme development. Featured include:
 
-# HTML5 Boilerplate integration
-# Responsive CSS
-# Inclusion of common JavaScript libraries: Modernizr, jQuery UI (tabs, dialog and datepicker), and jQuery Validation
-# Asynchronous Social Widget Scripts for Facebook, Twitter, Google+
-# MailChimp API class
-# Capistrano Deployment script
+1. HTML5 Boilerplate integration
+2. Responsive CSS
+3. Inclusion of common JavaScript libraries: Modernizr, jQuery UI (tabs, dialog and datepicker), and jQuery Validation
+4. Asynchronous Social Widget Scripts for Facebook, Twitter, Google+
+5. MailChimp API class
+6. Capistrano Deployment script
 
 
 To Use:
 
-# Set your environment configuration in wp-config.php. Don't forget to get a new set of Authentication Unique Keys and Salts and adjust your table_prefix as needed.
-# Add an environment trigger file one directory above your project: "env_local", "env_test", etc.
-# For Capistrano deployment, add your deployment settings to /config/deploy.rb
+1. Set your environment configuration in wp-config.php. Don't forget to get a new set of Authentication Unique Keys and Salts and adjust your table_prefix as needed.
+2. Add an environment trigger file one directory above your project: "env_local", "env_test", etc.
+3. For Capistrano deployment, add your deployment settings to /config/deploy.rb
