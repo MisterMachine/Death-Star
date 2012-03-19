@@ -1,0 +1,79 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Form Framework</title>
+	</head>
+	<body>
+
+		<form id="_form" name="_form" action="" method="post" accept-charset="UTF-8">
+			<fieldset class="width2">
+				<legend>Basic information</legend>	
+				<label class="width1 first field-first">First Name<input id="first_name" name="first_name" type="text" class="text" value="" maxlength="" tabindex="" /></label>
+				<label class="width1 field-last">Last Name<input id="last_name" name="last_name" type="text" class="text" value="" maxlength="" tabindex="" /></label>
+				<label class="error width2 first field-address">Address<input id="address" name="address" type="text" class="text" value="" maxlength="" tabindex="" />
+				<em class="error">This field is required.</em>
+				</label>
+				<label class="width1 first field-city">City<input id="city" name="city" type="text" class="text" value="" maxlength="" tabindex="" /></label>
+				
+				<div class="wrp-select">
+				<label class="unitx1 field-state">State
+					<select id="state" name="state" tabindex="" style="display: none;">
+						<option value="AB">Alberta</option>
+						<option value="BC">British Columbia</option>
+						<option value="MB">Manitoba</option>
+						<option value="NB">New Brunswick</option>
+						<option value="NL">Newfoundland and Labrador</option>
+						<option value="NT">Northwest Territories</option>
+						<option value="NS">Nova Scotia</option>
+						<option value="NU">Nunavut</option>
+						<option value="ON">Ontario</option>
+						<option value="PE">Prince Edward Island</option>
+						<option value="QC" selected="selected">Quebec</option>
+						<option value="SK">Saskatchewan</option>
+						<option value="YT">Yukon</option>
+					</select>
+				</label>	
+					
+					<div class="dropnice">
+						<div class="selected"><a rel="5">Alberta</a></div>
+						<div class="options" style="display: none; width: 115px;">
+							<ul>
+								<li class="option"><a>Alberta</a></li>
+								<li class="option"><a>British Columbia</a></li>
+								<li class="option"><a>Manitoba</a></li>
+								<li class="option"><a>New Brunswick</a></li>
+							</ul>
+						</div>
+					</div>
+				
+				</div>
+				
+				<label class="unitx1 field-zip">Zip Code<input id="zip" name="zip" type="text" class="text" value="" maxlength="" tabindex="" /></label>
+				<label class="width1 first field-phone">Phone<input id="phone" name="phone" type="text" class="text" value="" maxlength="" tabindex="" /></label>
+				<label class="width1 field-call">Cell<input id="cell" name="cell" type="text" class="text" value="" maxlength="" tabindex="" /></label>
+				<label class="width2 first field-email">Email<input id="email" name="email" type="text" class="text" value="" maxlength="" tabindex="" /></label>
+				<label class="width1 first field-password">Password<input id="password" name="password" type="password" class="text" value="" maxlength="" tabindex="" /></label>
+				<label class="width1 field-password">Retype password<input id="re-password" name="re-password" type="password" class="text" value="" maxlength="" tabindex="" /></label>
+				
+				<label class="width2 first field-describe">Description
+					<textarea id="description" name="description" rows="4" cols="4" tabindex=""></textarea>
+				</label>
+				
+				<label class="width2 first field-file">Import<input id="file" name="file" type="file" class="file" tabindex="" /></label>
+			</fieldset>
+			
+			<fieldset>
+				<label for="radiobutton_1" class="width1 first"><input id="radiobutton_1" name="radiobutton_1" type="radio" value="" tabindex="" />Lorem ipsum dolor sit amet</label>
+				<label for="radiobutton_2" class="width1"><input id="radiobutton_2" name="radiobutton_2" type="radio" value="" tabindex="" />Lorem ipsum dolor sit amet</label>
+				<label for="radiobutton_3" class="width2 first"><input id="radiobutton_3" name="radiobutton_3" type="radio" value="" tabindex="" />Lorem ipsum dolor sit amet, consectetuer adipiscing elit</label>
+				<label for="radiobutton_4" class="width2 first"><input id="radiobutton_4" name="radiobutton_4" type="radio" value="" tabindex="" />Duis autem vel eum iriure dolor in hendrerit in vulputate</label>
+				<label for="checkbox_1" class="width1 first"><input id="checkbox_1" name="checkbox_1" type="checkbox" value="" tabindex="" />Lorem ipsum dolor sit amet</label>
+				<label for="checkbox_2" class="width1"><input id="checkbox_2" name="checkbox_2" type="checkbox" value="" />Lorem ipsum dolor sit amet</label>
+				<label for="checkbox_3" class="width2 first"><input id="checkbox_3" name="checkbox_3" type="checkbox" value="" tabindex="" />Lorem ipsum dolor sit amet, consectetuer adipiscing elit</label>
+			</fieldset>
+			
+		</form>
+
+	</body>
+</html>

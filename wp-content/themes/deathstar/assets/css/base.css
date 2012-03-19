@@ -1,0 +1,513 @@
+/* Table of Contents
+==================================================
+	#Reset
+	#Type
+	#Links
+	#Global
+	#Tools
+	#Header
+	#Navigation
+	#Content
+	#Widgets
+	#Footer
+	#Forms
+	#Media Queries */
+
+	
+/* Reset 
+================================================== */
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+
+/* Type 
+================================================== */
+
+h1, h2, h3, h4, h5, h6	{ position: relative; }
+h1	{ font-family: "adobe-text-pro", sans-serif; font-size: 90px; line-height: 125px; font-weight: bold;  }
+h2	{ font-family: "adobe-text-pro", sans-serif; font-size: 36px; line-height: 42px; font-weight: 400; padding-bottom: 5px; font-style: normal;  }
+h3	{ font-family: "museo-sans",sans-serif;  font-size: 18px; line-height: 35px; font-weight: normal; font-weight: 700; }
+h4	{ font-family: "museo-sans",sans-serif; font-size: 15px; line-height: 25px; font-weight: normal; font-weight: 700; }
+h5	{ font-size: 13px; line-height: 20px; }
+h6	{ font-size: 13px; line-height: 20px; }
+
+p, pre, address	{ font-family: Helvetica, sans-serif; font-size: 14px; line-height: 22px; position: relative; }
+abbr, code, kbd,
+samp, small, var	{ line-height: 15px; }
+ul, ol, dl, dialog	{ font-family: Helvetica, sans-serif;  font-size: 13px; line-height: 20px; position: relative; }
+li ul, li ol, ul ul, ol ol	{ font-family: Helvetica, sans-serif; margin-top: 0; margin-bottom: 0;}
+.small { color: #999; font-size: 12px; }
+
+form, legend, label	{ font-size: 13px; line-height: 18px; }
+legend	{ position: relative; display: block; }
+
+
+/* Links
+================================================== */
+
+a { font-family: Helvetica, sans-serif; color: #316698; text-decoration: none; /* font-size: 13px; line-height: 20px; */ }
+	a:hover { }
+
+.btn { padding: 12px 0; text-align: center; width: 100%; color: #fff; font-size: 17px; font-weight: bold; text-decoration: none; position: relative;
+	-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+	text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.35);
+	-moz-box-shadow: 0 0 2px 2px rgba(0,0,0,0.1); -webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,0.1); box-shadow: 0 0 2px 2px rgba(0,0,0,0.1); }  
+	.btn em { display: block; font-size: 12px; }
+
+
+/* Global
+================================================== */
+
+body { font-family: "museo-slab",serif; color: #333; background: #333; }
+	header { overflow: hidden; position: relative; background: #f5f5f3; }
+	
+section { width: 100%;  }
+	section article { margin: 0 auto; }
+
+.left, .alignleft { float: left; }
+	.alignleft { margin: 0 10px 10px 0; }
+.right, .alignright { float: right; }
+	.alignright { margin: 0 0 10px 10px; }
+.center { text-align: center; }
+
+
+/* Tools
+================================================== */
+	
+.toolbox { display: block; background: #333; height: 40px; }
+
+.account {  }
+	.account li { float: left; display: inline; }
+		.account a { float: left; color: #fff; font-family: "museo-sans",sans-serif; padding: 10px 20px; color: #fff; text-decoration: none; font-size: 12px;  }
+
+/* Header
+================================================== */	
+
+header { height: 100px; }
+
+.hgroup { padding-bottom: 10px; }
+
+.logo, .logo a { display: block; background: url(../img/logo.png) 0 10px no-repeat; 
+	font-family: Arial; font-size: 24px; line-height: 100px; }
+
+
+/* Navigation
+================================================== */
+
+nav { display: block;  }
+	nav ul { overflow: hidden; margin: 0 auto; text-align: center; }
+		nav li { display: inline; float: left; text-align: center; height: 100px; width: 25%; }
+		nav a { float: left;  font-family: "museo-sans",sans-serif; text-transform: uppercase; padding: 40px 16px 25px 16px; color: #333; text-decoration: none; font-weight: bold; }
+			nav .current-menu-item { background: url(../img/nav-active.png) 0 bottom transparent repeat-x; }
+
+
+/* Messaging 
+================================================== */	
+
+.messages { background-color: #fff; padding: 30px 0; background-image: none;}
+
+	
+/* Section Rules
+================================================== */
+
+.content { background: #f5f5f3; min-height: 500px; }	
+.content section { background: url(../img/bg-cuff.png) center 0 no-repeat; padding: 30px 0 60px 0; }
+
+	.content section.gallery article { -moz-box-shadow: 0 2px 2px rgba(0,0,0,0.3); -webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.3); box-shadow: 0 2px 2px rgba(0,0,0,0.3);  }
+		
+	.masonry { text-align: center; }
+	
+	
+/* Article Rules
+================================================== */		
+
+section article { font-family: Arial; margin-top: 20px; }
+	cite { display: block; padding: 0 0 20px 0; }
+	
+	section article.sm { padding-bottom: 10px; }
+		.sm figure { margin-bottom: 10px; }
+	section article.md { height: 540px; padding-bottom: 10px }
+		.md figure { margin-bottom: 10px; }
+	
+figure { overflow: hidden; margin: 0; padding: 0; }
+	.single figure img { width: 100%; }
+	.single figure.main {  -moz-box-shadow: 0 2px 2px rgba(0,0,0,0.3); -webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.3); box-shadow: 0 2px 2px rgba(0,0,0,0.3);  }
+		.md figure { height: 450px; overflow: hidden; }
+		
+	.copy { padding-top: 20px; }
+
+.mug img { max-width: 100%; }
+ 
+ 
+/* Parts
+================================================== */	
+
+/* share */	
+.share { margin: 10px 0; overflow: hidden; }
+.share li { display: inline; width: 100px; }
+	.fb-like { width: 100px; }
+
+/* gallery horizontal */	
+.sm { text-align: center; }	
+	.sm figure { height: 220px; overflow: hidden; }
+
+/* wide */	
+.wide { background: #333; color: #fff; text-align: center; }
+	.banner { background: url(http://www.imgbase.info/images/safe-wallpapers/digital_art/3d_space_scene/12496_3d_space_scene.jpg) center 0 no-repeat #333; height: 300px; }
+	.feature-wrp { padding: 0; color: #fff; background: url(../img/bg.jpg) #333; overflow: hidden; }
+	.feature article { padding-bottom: 25px; }
+	.feature img { float: left; }
+	.feature figure { margin-top: 40px;  overflow: hidden; float: left;
+	-moz-box-shadow: 0 4px 20px rgba(0,0,0,0.6); -webkit-box-shadow: 0 4px 20px rgba(0,0,0,0.6); box-shadow: 0 4px 20px rgba(0,0,0,0.6);  }
+
+/* curator */
+.curator { overflow: hidden; background-color: #fff; margin-top: 40px; }
+.box { padding: 10px; }
+.round { -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;-moz-box-shadow: 0 2px 2px rgba(0,0,0,0.3); -webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.3); box-shadow: 0 2px 2px rgba(0,0,0,0.3);  }
+
+/* slideshow */
+.slides {  }
+.slides	li {  float: left; margin-bottom: 10px; }	
+.slides	li a { float: left; display: block; border: 1px solid #ccc; }
+.slides img { float: left; max-width: 60px; }	
+	
+/* lightbox */		
+.lightbox { background: #ccc; overflow: hidden; padding: 20px; margin: 70px 30px;
+	-moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;
+	-moz-box-shadow: 0 0 2px 2px rgba(0,0,0,0.1); -webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,0.1); box-shadow: 0 0 2px 2px rgba(0,0,0,0.1);  }
+	.lightbox .inner { background: #fff; padding: 20px; overflow: hidden;
+	-moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;
+	-moz-box-shadow: 0 0 2px 2px rgba(0,0,0,0.1); -webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,0.1); box-shadow: 0 0 2px 2px rgba(0,0,0,0.1);  }
+
+/* facebook connect */	
+.fb_connect { background-color: #eee; text-align: center; padding: 20px; display: block; overflow: hidden; }
+	.fb_connect button { float: none; }
+
+
+/* Footer
+================================================== */	
+
+footer { background: #333; color: #fff; height: 200px; }
+	.inner { padding: 20px 0; }
+	footer ul { overflow: hidden; }
+		footer li { float: left; display: inline; margin: 0 20px 0 0; }
+			footer li a { float: left; color: #fff; }
+
+
+/* Forms
+================================================== */	
+	
+fieldset a { float: left; display: inline; padding: 20px; }
+
+form {  }
+fieldset { display: block; margin: 10px 0 0 0; padding: 0;}
+legend { padding-bottom: 18px; background: #eee; padding: 10px; display: block; font-weight: bold; margin-bottom: 5px; }
+label { padding-top: 5px; margin: 0; float: left; display: block; }
+label span {  }
+input[type="text"],
+input[type="password"],
+input[type="select"],
+input[type="search"] { display: block; margin-bottom: -1px; margin-top: 5px; padding: 8px 8px; border: 0;
+	-moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; 
+	 -moz-box-shadow: inset 0 0 1px 1px rgba(0,0,0,0.1); -webkit-box-shadow: inset 0 0 1px 1px rgba(0,0,0,0.1); box-shadow: inset 0 0 1px 1px rgba(0,0,0,0.1);
+	 }
+input[type="file"] { border: none; }
+textarea { display: block; margin-bottom: -2px; padding: 6px 8px; border: solid 1px #ccc; width: 99%; line-height: 18px; overflow: auto; resize: none; clear: left; }
+select { float: left; display: block; margin-top: 2px; margin: 0; }
+input[type="submit"],
+input[type="reset"],
+input[type="button"] { font-family: Helvetica, arial, sans-serif; margin-bottom: 0; }
+
+input[type="text"]:focus, textarea:focus { background: #eee; }
+
+button { float: left; display: inline; font-family: Helvetica, Arial, sans-serif; background-color: #333; border: 0; padding: 15px 40px; color: #fff; font-weight: bold; cursor: pointer; text-transform: uppercase; 
+		-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
+		
+.radio	{ margin: 6px 0 0 1px; float: left; display: block; clear: left;}
+.radio_label { margin: 0 0 13px 0; padding-left: 18px; float: none; display: block; clear: none; }
+
+.checkbox { margin: 6px 0 0 1px; float: left; display: block; clear: left;}
+.checkbox_label { margin: 0 0 13px 0; padding-left: 18px; float: none; display: block; clear: none; }
+
+/* Form widths */
+
+.width1 { width: 115px; }
+.width2 { width: 230px; }
+.width3 { width: 345px; }
+.width4 { margin-left: 0 !important; width: 460px; }
+
+label.width1, 
+label.width2, 
+label.width3, 
+label.width4 { float: left; margin-left: 18px; margin-top: 10px; }
+
+label.first { margin-left: 0; }
+label.width4 { width: 448px; display: block; }
+
+label.width1 input[type="text"], 
+label.width1 input[type="password"], 
+label.width1 input[type="select"], 
+label.width1 input[type="search"] { width: 112px; }
+label.width2 input[type="text"], 
+label.width2 input[type="password"], 
+label.width2 input[type="select"], 
+label.width2 input[type="search"] { width: 224px; }
+label.width3 input[type="text"], 
+label.width3 input[type="password"], 
+label.width3 input[type="select"], 
+label.width3 input[type="search"] { width: 336px; }
+label.width4 input[type="text"], 
+label.width4 input[type="password"], 
+label.width4 input[type="select"], 
+label.width4 input[type="search"] { width: 448px; }
+
+label.width1 select { width: 180px; }
+label.width2 select { width: 360px; }
+label.width3 select { width: 540px; }
+label.width4 select { width: 520px; }
+
+/* 360
+================================================== */
+@media screen
+and (max-width : 480px) {
+	
+	body { min-width: none; }
+		
+	.align_center,
+	.align_right { text-align: left; }
+	
+	/* Type 
+================================================== */
+
+h1, h2, h3, h4, h5, h6	{ position: relative; }
+h1	{ font-family: "adobe-text-pro", sans-serif; font-size: 30px; line-height: 35px; font-weight: bold;  }
+h2	{ font-family: "adobe-text-pro", sans-serif; font-size: 26px; line-height: 28px; font-weight: 400; padding-bottom: 5px; font-style: normal;  }
+h3	{ font-family: "museo-sans",sans-serif;  font-size: 18px; line-height: 25px; font-weight: normal; font-weight: 700; }
+h4	{ font-family: "museo-sans",sans-serif; font-size: 16px; line-height: 20px; font-weight: normal; font-weight: 700; }
+h5	{ font-size: 13px; line-height: 20px; }
+h6	{ font-size: 13px; line-height: 20px; }
+
+	
+	/* header */
+	header, .messages { text-align: center; }
+	nav ul { height: auto; }
+		nav li { width: 33%; }
+		.nav-about, .nav-blog, .nav-addons { display: none; }	
+	
+	.content section { padding: 20px 0; }
+	.banner { background-image: none; height: 150px;}
+	
+	h4 { line-height: 18px; padding: 10px 0; }
+	.h-features p, 
+	.sitemap ul { width: 95%;}
+	.tabs, 
+	.icon, 
+	.icon h4, 
+	.tip, 
+	.showcase, 
+	.btn .ico, 
+	.h-profile, 
+	.stats .thumb, 
+	figure span, .
+	gallery .thumb  { display: none; }
+	.h-features h2 { padding-bottom: 40px; }
+	
+	.slides img { max-width: 100%; }
+	
+	/* footer */
+	footer li { display: block; }
+	footer li a { padding: 10px 0; }
+	.social, .newsletter { overflow: hidden; }
+		label.width4 { width: 300px; }
+		.width4 { width: 250px; }
+		
+	footer li, footer li a, 
+	li, li a { display: block; float: none; }	
+}
+
+
+/* 960 Grid
+================================================== */
+@media screen
+and (min-width : 480px) {
+
+/*
+  960 Grid System ~ Core CSS.
+  Learn more ~ http://960.gs/
+
+  Licensed under GPL and MIT.
+*/
+
+/*
+  Forces backgrounds to span full width,
+  even if there is horizontal scrolling.
+  Increase this if your layout is wider.
+
+  Note: IE6 works fine without this fix.
+*/
+
+body { min-width: 960px; }
+
+/* `Container
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 { margin-left: auto; margin-right: auto; width: 960px; }
+
+/* `Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12 { display: inline; float: left; margin-left: 10px; margin-right: 10px; }
+
+.push_1, .pull_1,
+.push_2, .pull_2,
+.push_3, .pull_3,
+.push_4, .pull_4,
+.push_5, .pull_5,
+.push_6, .pull_6,
+.push_7, .pull_7,
+.push_8, .pull_8,
+.push_9, .pull_9,
+.push_10, .pull_10,
+.push_11, .pull_11 { position: relative; }
+
+/* `Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+
+.alpha { margin-left: 0; }
+.omega { margin-right: 0; }
+
+/* `Grid >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .grid_1 { width: 60px; }
+.container_12 .grid_2 { width: 140px; }
+.container_12 .grid_3 { width: 220px; }
+.container_12 .grid_4 { width: 300px; }
+.container_12 .grid_5 { width: 380px; }
+.container_12 .grid_6 { width: 460px; }
+.container_12 .grid_7 { width: 540px; }
+.container_12 .grid_8 { width: 620px; }
+.container_12 .grid_9 { width: 700px; }
+.container_12 .grid_10 { width: 780px; }
+.container_12 .grid_11 { width: 860px; }
+.container_12 .grid_12 { width: 940px; }
+
+/* `Prefix Extra Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .prefix_1 { padding-left: 80px; }
+.container_12 .prefix_2 { padding-left: 160px; }
+.container_12 .prefix_3 { padding-left: 240px; }
+.container_12 .prefix_4 { padding-left: 320px; }
+.container_12 .prefix_5 { padding-left: 400px; }
+.container_12 .prefix_6 { padding-left: 480px; }
+.container_12 .prefix_7 { padding-left: 560px; }
+.container_12 .prefix_8 { padding-left: 640px; }
+.container_12 .prefix_9 { padding-left: 720px; }
+.container_12 .prefix_10 { padding-left: 800px; }
+.container_12 .prefix_11 { padding-left: 880px; }
+
+/* `Suffix Extra Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .suffix_1 { padding-right: 80px; }
+.container_12 .suffix_2 { padding-right: 160px }
+.container_12 .suffix_3 { padding-right: 240px; }
+.container_12 .suffix_4 { padding-right: 320px; }
+.container_12 .suffix_5 { padding-right: 400px; }
+.container_12 .suffix_6 { padding-right: 480px; }
+.container_12 .suffix_7 { padding-right: 560px; }
+.container_12 .suffix_8 { padding-right: 640px; }
+.container_12 .suffix_9 { padding-right: 720px; }
+.container_12 .suffix_10 { padding-right: 800px; }
+.container_12 .suffix_11 { padding-right: 880px; }
+
+/* `Push Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .push_1 { left: 80px; }
+.container_12 .push_2 { left: 160px; }
+.container_12 .push_3 { left: 240px; }
+.container_12 .push_4 { left: 320px; }
+.container_12 .push_5 { left: 400px; }
+.container_12 .push_6 { left: 480px; }
+.container_12 .push_7 { left: 560px; }
+.container_12 .push_8 { left: 640px; }
+.container_12 .push_9 { left: 720px; }
+.container_12 .push_10 { left: 800px; }
+.container_12 .push_11 { left: 880px; }
+
+/* `Pull Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .pull_1 { left: -80px; }
+.container_12 .pull_2 { left: -160px; }
+.container_12 .pull_3 { left: -240px; }
+.container_12 .pull_4 { left: -320px; }
+.container_12 .pull_5 { left: -400px; }
+.container_12 .pull_6 { left: -480px; }
+.container_12 .pull_7 { left: -560px; }
+.container_12 .pull_8 { left: -640px; }
+.container_12 .pull_9 { left: -720px; }
+.container_12 .pull_10 { left: -800px; }
+.container_12 .pull_11 { left: -880px; }
+
+/* `Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+
+.clearfix:before,
+.clearfix:after,
+.container_12:before,
+.container_12:after {
+  content: '.';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+
+.clearfix:after,
+.container_12:after {
+  clear: both;
+}
+
+/*
+  The following zoom:1 rule is specifically for IE6 + IE7.
+  Move to separate stylesheet if invalid CSS is a problem.
+*/
+
+.clearfix,
+.container_12 {
+  zoom: 1;
+}
+}
+
+
+
