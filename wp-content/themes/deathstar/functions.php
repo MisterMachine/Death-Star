@@ -10,6 +10,7 @@ if(WP_ENV==='local') {
 }
 require_once('classes/deathstar.php'); // Class for setting up environment: custom post types, featured images, etc
 require_once('classes/widgets.php'); // Custom theme widgets
+require_once('classes/wpalchemy/MetaBox.php'); // Class for creating and managing custom meta boxes
 require_once('classes/MCAPI.class.php'); // MailChimp API
 DeathStar::init();
 
