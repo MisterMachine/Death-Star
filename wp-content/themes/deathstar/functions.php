@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage 
+ * @subpackage
 */
 
 if(WP_ENV==='local') {
@@ -15,15 +15,14 @@ require_once('classes/MCAPI.class.php'); // MailChimp API
 DeathStar::init();
 
 /**
-* add_site_styles function.
+* ds_add_site_styles function.
 * Add site styles to the head of the theme
 * @access public
 * @return void
 */	
-function add_site_styles()
+function ds_add_site_styles()
 {
-	if (!is_admin() && !ds_is_login_page()) 
-	{
+	if ( ! is_admin() && ! ds_is_login_page()) {
 		// Responsive:
 		//wp_enqueue_style('1200', get_bloginfo('template_directory') . '/assets/css/1200.css', array(), '1.00', 'all and (min-width: 1200px)');
 		//wp_enqueue_style('960', get_bloginfo('template_directory') . '/assets/css/960.css', array(), '1.00', 'all and (min-width: 620px) and (max-width: 1200px)');
@@ -35,22 +34,19 @@ function add_site_styles()
 
 
 /**
- * add_site_scripts function.
+ * ds_add_site_scripts function.
  * Add site scripts to the theme. Most will go in Footer for fastest loading.
  * @access public
  * @return void
  */
-function add_site_scripts() {
-
+function ds_add_site_scripts() {
 ?>
 <script type="text/javascript">
 	var AJAX_URL = '<?php echo admin_url('admin-ajax.php'); ?>';
 	var disqus_developer = <?php echo DISQUS_DEVELOPER; ?>;
 </script>
 <?php
-	
-	if (!is_admin() && !ds_is_login_page())
-	{
+	if ( ! is_admin() && ! ds_is_login_page()) {
 		wp_enqueue_script( 'modernizr', get_bloginfo('template_directory') . '/assets/js/modernizr-2.5.3.min.js', array() ); // Load modernizer in header
 		if(TYPEKIT_ID)
 		{
@@ -58,7 +54,7 @@ function add_site_scripts() {
 		}
 		// Re-register jquery in order to load jquery from CDN
 		wp_deregister_script( 'jquery' );
-	    wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');
+		wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');
 		wp_enqueue_script( 'jquery', FALSE, array(), FALSE, TRUE ); // Load in footer from Google CDN
 
 		if(WP_ENV==='local')
@@ -80,7 +76,6 @@ function add_site_scripts() {
 			wp_enqueue_script( 'app-min', get_bloginfo('template_directory') . '/assets/js/app-min.js', array('jquery'), '1.00', TRUE ); // Load in footer
 		}
 	}
-
 }
 
 
@@ -157,9 +152,25 @@ function ds_submit_newsletter_signup()
 
 /* helper functions */
 
+/**
+ * ds_show_admin_bar function.
+ * Control where admin bar is displayed.
+ * @access public
+ * @return void
+ */
+function ds_show_admin_bar() {
+	$show_admin_bar = false;
+	$the_roles = array( 'administrator', 'editor', 'author' );
+	foreach ( $the_roles as $the_role ) {
+		if ( current_user_can( $the_role ) ) {
+			$show_admin_bar = true;
+		}
+	}
+	return $show_admin_bar;
+}
 
 /**
- * new_excerpt_more function.
+ * ds_excerpt_more function.
  * Over write the default WordPres [...] with anything you like.
  * @access public
  * @return void
@@ -183,10 +194,13 @@ function ds_is_login_page() {
 
 
 // Add Theme style sheets
-add_action('wp_print_styles', 'add_site_styles');
+add_action('wp_print_styles', 'ds_add_site_styles');
 
 // Add Theme Scripts
-add_action('wp_print_scripts', 'add_site_scripts');
+add_action('wp_print_scripts', 'ds_add_site_scripts');
+
+// Hide admin bar
+add_filter( 'show_admin_bar', 'ds_show_admin_bar' );
 
 // Modify the default expert more symbol
 add_filter('excerpt_more', 'ds_excerpt_more');

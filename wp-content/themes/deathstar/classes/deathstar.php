@@ -40,10 +40,10 @@ class DeathStar {
 		if ( function_exists('register_nav_menus') )
 		{
 			register_nav_menus( array(
-			    'main_menu' => __('Main Menu'),
-			    'local_menu' => __('Local Menu'),
-			    'footer_menu' => __('Footer Menu'),
-			    'social_widgets_menu' => __('Social Widgets Menu')
+				'main_menu' => __('Main Menu'),
+				'local_menu' => __('Local Menu'),
+				'footer_menu' => __('Footer Menu'),
+				'social_widgets_menu' => __('Social Widgets Menu')
 			));
 		}
 
