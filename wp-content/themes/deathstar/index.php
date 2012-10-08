@@ -16,47 +16,46 @@ get_header(); ?>
 				</article>
 			</section>	
 		</div>
-		
+
 <!-- grid reset -->	
 		<div class="full container_12">
 			<section class="masonry gallery clearfix">
 			<?php if (have_posts()) : ?>
 
-			<?php while (have_posts()) : the_post(); ?>
-			
-			<article class="sm grid_3">
-			<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-				<figure>
-					<?php the_content(''); ?>
-				</figure>
-			
-				<h3><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-				<!--div class="byline">
-					<span class="time"><?php // the_time('F jS, Y') ?></span> 
-					<span class="name"> <?php // the_author() ?></span> 
-				</div>
+				<?php while (have_posts()) : the_post(); ?>
+				<article class="sm grid_3">
+					<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+						<figure>
+							<?php the_content(''); ?>
+						</figure>
+					
+						<h3><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+						<!--div class="byline">
+							<span class="time"><?php // the_time('F jS, Y') ?></span> 
+							<span class="name"> <?php // the_author() ?></span> 
+						</div>
+		
+						<!--div class="entry">
+							<?php // the_content('Read the rest of this entry &raquo;'); ?>
+						</div-->
+		
+						<!--p class="post_meta"><?php // the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php // the_category(', ') ?> | <?php // edit_post_link('Edit', '', ' | '); ?>  <?php // comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p -->
+					</div>
+				</article>
+				<?php endwhile; ?>
 
-				<!--div class="entry">
-					<?php // the_content('Read the rest of this entry &raquo;'); ?>
-				</div-->
-
-				<!--p class="post_meta"><?php // the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php // the_category(', ') ?> | <?php // edit_post_link('Edit', '', ' | '); ?>  <?php // comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p -->
-			</div>
-			</article>
-			
-			<?php endwhile; ?>
+				<?php get_template_part('parts/pagination'); ?>
 
 			<?php else : ?>
-	
-			<h3>Not Found</h3>
-			<p>Sorry, but you are looking for something that isn't here.</p>
-			<?php get_search_form(); ?>
+
+				<h3>Not Found</h3>
+				<p>Sorry, but you are looking for something that isn't here.</p>
+				<?php get_search_form(); ?>
 
 			<?php endif; ?>
-		
 			</section>
 		</div>
-	
+
 <!-- grid reset -->	
 		<div class="full container_12">
 			
