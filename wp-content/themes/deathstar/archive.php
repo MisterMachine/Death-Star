@@ -7,12 +7,19 @@
 get_header();
 ?>
 
-	<div id="content">
+<div class="content">
 
+	<div class="container_12">
+		<div class="sidebar aside grid_3">
+			<?php get_sidebar(); ?>
+		</div>
+
+		<div class="main grid_9">
 		<?php if (have_posts()) : ?>
 
 			<?php /* If this is a category archive */ if (is_category()) : ?>
 				<h1><?php single_cat_title(); ?></h1>
+				<?php echo category_description(); ?>
 			<?php /* If this is a tag archive */ elseif( is_tag() ) : ?>
 				<h1><?php _e('Posts Tagged'); ?> &#8216;<?php single_tag_title(); ?>&#8217;</h1>
 			<?php /* If this is a daily archive */ elseif (is_day()) : ?>
@@ -27,47 +34,32 @@ get_header();
 				<h1><?php _e('Archives'); ?></h1>
 			<?php endif; ?>
 
-		<div class="navigation">
-			<div><?php next_posts_link('&laquo; Older Entries') ?></div>
-			<div><?php previous_posts_link('Newer Entries &raquo;') ?></div>
-		</div>
-
-		<?php while (have_posts()) : the_post(); ?>
-		<div <?php post_class() ?>>
-				<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-				<small><?php the_time('l, F jS, Y') ?></small>
-
-				<div class="entry">
-					<?php the_content() ?>
+			<?php while (have_posts()) : the_post(); ?>
+				<div <?php post_class() ?>>
+					<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+					<small><?php the_time('l, F jS, Y') ?></small>
+					<div class="entry">
+						<?php the_content() ?>
+					</div>
+					<p class="postmetadata"><?php the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php the_category(', ') ?> | <?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
 				</div>
+			<?php endwhile; ?>
+			<?php get_template_part('parts/pagination'); ?>
 
-				<p class="postmetadata"><?php the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php the_category(', ') ?> | <?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
+		<?php else : // No Posts ?>
 
-			</div>
+			<?php if ( is_category() ) : // If this is a category archive ?>
+				<h2><?php _e('Sorry, but there aren\'t any posts in this category yet.'); ?></h2>
+			<?php elseif ( is_date() ) : // If this is a date archive ?>
+				<h2><?php _e('Sorry, but there aren\'t any posts with this date.'); ?></h2>
+			<?php elseif ( is_author() ) : // If this is a category archive ?>
+				<h2><?php _e('Sorry, but there aren\'t any posts by this author yet.'); ?></h2>
+			<?php else : ?>
+				<h2><?php _e('No posts found.'); ?></h2>
+			<?php endif; ?>
 
-		<?php endwhile; ?>
-
-		<div class="navigation">
-			<div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div>
-			<div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
+		<?php endif; ?>
 		</div>
-
-		<?php else : // No Posts
-			if ( is_category() ) { // If this is a category archive
-				printf("<h2>Sorry, but there aren't any posts in the %s category yet.</h2>", single_cat_title('',false));
-			} else if ( is_date() ) { // If this is a date archive
-				echo("<h2>Sorry, but there aren't any posts with this date.</h2>");
-			} else if ( is_author() ) { // If this is a category archive
-				$userdata = get_userdatabylogin(get_query_var('author_name'));
-				printf("<h2>Sorry, but there aren't any posts by %s yet.</h2>", $userdata->display_name);
-			} else {
-				echo("<h2>No posts found.</h2>");
-			}
-			get_search_form();
-		endif;?>
-
 	</div>
-
-<?php get_sidebar(); ?>
-
+</div>
 <?php get_footer(); ?>

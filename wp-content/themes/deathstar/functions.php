@@ -48,8 +48,7 @@ function ds_add_site_scripts() {
 <?php
 	if ( ! is_admin() && ! ds_is_login_page()) {
 		wp_enqueue_script( 'modernizr', get_bloginfo('template_directory') . '/assets/js/modernizr-2.5.3.min.js', array() ); // Load modernizer in header
-		if(TYPEKIT_ID)
-		{
+		if(TYPEKIT_ID) {
 			wp_enqueue_script( 'typekit', 'http://use.typekit.com/'.TYPEKIT_ID.'.js', array(), FALSE, TRUE ); // Load in footer
 		}
 		// Re-register jquery in order to load jquery from CDN
@@ -57,8 +56,7 @@ function ds_add_site_scripts() {
 		wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');
 		wp_enqueue_script( 'jquery', FALSE, array(), FALSE, TRUE ); // Load in footer from Google CDN
 
-		if(WP_ENV==='local')
-		{
+		if(WP_ENV==='local') {
 			/* 
 			 * Un-minified app.js + separate plugin file for easier development
 			 * Plugins included:
@@ -69,9 +67,7 @@ function ds_add_site_scripts() {
 			 */
 			wp_enqueue_script( 'plugins', get_bloginfo('template_directory') . '/assets/js/plugins.js', array('jquery'), '1.00', TRUE ); // Load in footer
 			wp_enqueue_script( 'app', get_bloginfo('template_directory') . '/assets/js/app.js', array('jquery'), '1.00', TRUE ); // Load in footer
-		}
-		else
-		{
+		} else {
 			// minified app.js with plugins combined in one file.
 			wp_enqueue_script( 'app-min', get_bloginfo('template_directory') . '/assets/js/app-min.js', array('jquery'), '1.00', TRUE ); // Load in footer
 		}
@@ -81,8 +77,7 @@ function ds_add_site_scripts() {
 
 /* ajax functions */
 
-function ds_submit_newsletter_signup()
-{
+function ds_submit_newsletter_signup() {
 
 	$response = array();
 	
